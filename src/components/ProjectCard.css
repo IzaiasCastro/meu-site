@@ -1,0 +1,40 @@
+.project-card {
+  background-color: var(--primary-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.project-card .tag {
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.project-card .links {
+  margin-top: auto; /* Empurra os links para o final do card */
+  display: flex;
+  gap: 1rem;
+}
