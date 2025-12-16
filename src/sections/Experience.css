@@ -1,0 +1,112 @@
+/* src/sections/Experience.css */
+
+#experience {
+  padding: 4rem 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* A linha central da timeline */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: var(--primary-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* O círculo na linha da timeline */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: var(--bg-color);
+  border: 4px solid var(--secondary-color);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Itens da esquerda */
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+/* Itens da direita */
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+/* Círculo para os itens da direita */
+.timeline-item:nth-child(even)::after {
+  left: -16px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: var(--primary-color);
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: var(--secondary-color);
+}
+
+.timeline-company {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.timeline-period {
+  font-size: 0.9rem;
+  color: #aaa;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* --- Media Queries para Responsividade --- */
+@media screen and (max-width: 768px) {
+  /* Linha da timeline para a esquerda */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Todos os itens para a direita */
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item:nth-child(odd) {
+    left: 0;
+  }
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+
+  /* Círculos na linha */
+  .timeline-item::after {
+    left: 15px;
+  }
+}

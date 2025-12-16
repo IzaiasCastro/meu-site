@@ -1,5 +1,5 @@
 import './Header.css';
-import { useMediaQuery } from '../hooks/useMediaQuery.js';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 function Header() {
   const isMobile = useMediaQuery('(max-width: 768px)');
@@ -14,6 +14,7 @@ function Header() {
       </a>
       <nav>
         <a href="#about">Sobre</a>
+        <a href="#experience">Experiência</a>
         <a href="#projects">Projetos</a>
         <a href="#contact">Contato</a>
       </nav>
