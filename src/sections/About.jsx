@@ -5,11 +5,8 @@ function About() {
   "APIs REST",
   "n8n",
   "MySQL",
-  "SQL Server",
-  "React",
   "Vue.js",
   "JavaScript (ES6+)",
-  "TypeScript",
   "Git",
   "Docker"
 ];
