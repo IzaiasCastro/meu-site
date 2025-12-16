@@ -1,0 +1,28 @@
+# =======================================
+# 📦 Nixpacks Config - Portfólio React
+# =======================================
+
+# Define o ambiente de build
+[phases.setup]
+# Usa uma versão moderna e estável do Node.js
+nixPkgs = ["nodejs_20"]
+
+# Instala as dependências do projeto
+[phases.install]
+cmds = ["npm install"]
+
+# Compila a aplicação para produção
+[phases.build]
+cmds = ["npm run build"]
+
+# Define como iniciar a aplicação
+[start]
+# O 'serve' é um servidor estático simples para a pasta 'dist' gerada pelo build.
+# A flag '-s' indica que é um Single-Page Application, tratando todas as rotas.
+# A flag '-l $PORT' faz o servidor escutar na porta fornecida pelo Easypanel.
+cmd = "npx serve -s dist -l $PORT"
+
+# Define variáveis de ambiente para o container
+[variables]
+NODE_ENV = "production"
+HOST = "0.0.0.0"
