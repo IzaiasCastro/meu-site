@@ -1,10 +1,11 @@
 import './ProjectCard.css';
 
 function ProjectCard({ project }) {
-  const { title, description, tags, liveUrl, repoUrl } = project;
+  const { title, img, description, tags, liveUrl, repoUrl } = project;
 
   return (
     <div className="project-card">
+      <img src={img} alt={`Imagem do projeto ${title}`} className="project-image" />
       <h3>{title}</h3>
       <p>{description}</p>
       <div className="tags">

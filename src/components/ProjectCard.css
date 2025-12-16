@@ -5,7 +5,18 @@
   border: 1px solid #333;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  border: 3px solid var(--secondary-color);
 }
 
 .project-card:hover {
@@ -37,4 +48,10 @@
   margin-top: auto; /* Empurra os links para o final do card */
   display: flex;
   gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    padding: 1rem;
+  }
 }

@@ -1,9 +1,17 @@
-import './Header.css'; // Criaremos este arquivo a seguir
+import './Header.css';
+import { useMediaQuery } from '../hooks/useMediaQuery.js';
 
 function Header() {
+  const isMobile = useMediaQuery('(max-width: 768px)');
+
   return (
     <header className="header">
-      <div className="logo">Seu Nome</div>
+      <a href="#hero" className="logo-container">
+        {!isMobile && (
+          <img src="/perfil.png" alt="Foto de perfil de Izaias Castro" className="logo-image" />
+        )}
+        <span className="logo-name">Izaias Castro</span>
+      </a>
       <nav>
         <a href="#about">Sobre</a>
         <a href="#projects">Projetos</a>

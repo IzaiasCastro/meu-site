@@ -4,19 +4,13 @@ import './Projects.css';
 // Dados dos projetos (idealmente viriam de uma API ou arquivo JSON)
 const projectData = [
   {
-    title: "Projeto Incrível 1",
-    description: "Uma breve descrição do projeto, as tecnologias usadas e o problema que ele resolve.",
-    tags: ["React", "API REST", "Styled Components"],
-    liveUrl: "#", // Link para a demo ao vivo
-    repoUrl: "#"  // Link para o repositório no GitHub
+    title: "Sistema de Gestão com API REST",
+    img: "/atendebarber.png",
+    description: "Sistema de agendamento inteligente para barbearias, desenvolvido com Laravel e Filament, integrado ao WhatsApp via WppConnect e com automações orquestradas pelo n8n. Permite gestão completa de horários, serviços e profissionais, além de confirmações automáticas e lembretes via WhatsApp.",
+    tags: ["Laravel", "API REST", "MySQL", "JWT", "Docker"],
+    liveUrl: "https://sistema-agendamento-1-app.zfmmtg.easypanel.host/login", // Link para a demo ao vivo
+    repoUrl: "https://github.com/IzaiasCastro/sistema-automacao-wpp-n8n"  // Link para o repositório no GitHub
   },
-  {
-    title: "Projeto Incrível 2",
-    description: "Outro projeto fantástico que demonstra suas habilidades em resolver problemas complexos.",
-    tags: ["Node.js", "Express", "MongoDB"],
-    liveUrl: "#",
-    repoUrl: "#"
-  }
 ];
 
 
